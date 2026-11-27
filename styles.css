@@ -1,8 +1,4 @@
 
-/* =========================
-   GLOBAL STYLES
-========================= */
-
 :root {
   --blue: #4855dc;
   --blue-dark: #303fc0;
@@ -204,7 +200,7 @@ img {
   letter-spacing: -1.7px;
 }
 
-/* COMPLIANCE UNDERLINE */
+/* CURVED COMPLIANCE UNDERLINE */
 
 .highlight {
   color: var(--blue);
@@ -212,18 +208,29 @@ img {
   display: inline-block;
 }
 
+.highlight::before,
 .highlight::after {
   content: "";
   position: absolute;
-  height: 3px;
   left: 0;
-  right: 0;
-  bottom: -5px;
-  border-radius: 100%;
-  background: var(--blue);
-  transform: none;
+  width: 100%;
+  height: 7px;
+  border-bottom: 2.5px solid var(--blue);
+  border-radius: 50%;
   pointer-events: none;
 }
+
+.highlight::before {
+  bottom: -8px;
+  transform: rotate(-1.5deg);
+}
+
+.highlight::after {
+  bottom: -4px;
+  transform: rotate(1deg);
+}
+
+/* HERO PARAGRAPH */
 
 .intro {
   max-width: 650px;
@@ -233,7 +240,7 @@ img {
   line-height: 1.95;
 }
 
-/* HERO CHECKLIST */
+/* CHECKLIST */
 
 .checks {
   display: grid;
@@ -429,7 +436,7 @@ img.heading-curved-arrow {
   z-index: 1;
 }
 
-/* DASHBOARD IMAGE */
+/* DASHBOARD */
 
 .why-content {
   display: grid;
@@ -454,8 +461,6 @@ img.heading-curved-arrow {
   max-width: 480px;
   object-fit: contain;
 }
-
-/* DASHBOARD CHEVRON */
 
 .dashboard-chevron {
   position: absolute;
@@ -540,7 +545,7 @@ img.figma-chevron {
 }
 
 /* =========================
-   MOBILE NAVIGATION DRAWER
+   MOBILE NAVIGATION
 ========================= */
 
 .drawer-backdrop {
@@ -751,8 +756,9 @@ body.menu-open {
   .why-heading {
     display: block;
     text-align: center;
+    position: relative;
     margin-bottom: 36px;
-    padding-bottom: 110px;
+    padding-bottom: 145px;
   }
 
   .why h2 {
@@ -769,18 +775,18 @@ body.menu-open {
     line-height: 1.9;
   }
 
-  /* ARROW BELOW THE PARAGRAPH */
-
   .heading-curved-arrow {
+    display: block;
     position: absolute;
-    width: 30px;
-    height: auto;
-    max-width: 30px;
-    max-height: none;
+    width: 35px;
+    height: 129px;
+    max-width: 35px;
+    max-height: 129px;
     left: auto;
-    right: 4%;
+    right: 3%;
     top: auto;
     bottom: 0;
+    object-fit: contain;
   }
 
   /* DASHBOARD */
@@ -883,19 +889,21 @@ body.menu-open {
   }
 
   .hero h1 {
-    max-width: 360px;
-    margin-bottom: 22px;
-    font-size: 36px;
+    max-width: 380px;
+    margin: 0 auto 24px;
+    font-size: 38px;
     line-height: 1.16;
-    letter-spacing: -.65px;
+    letter-spacing: -.7px;
+  }
+
+  .highlight::before {
+    bottom: -8px;
+    height: 6px;
   }
 
   .highlight::after {
-    height: 2px;
-    left: 0;
-    right: 0;
     bottom: -4px;
-    transform: none;
+    height: 6px;
   }
 
   .intro {
@@ -949,31 +957,51 @@ body.menu-open {
     width: 100%;
   }
 
+  /* BOTH FLOATING CARDS REMAIN VISIBLE */
+
   .rating-card {
-    display: none;
+    display: flex;
+    top: 39%;
+    right: 2%;
+    padding: 9px 11px;
+    gap: 8px;
+    border-radius: 9px;
+  }
+
+  .rating-card > strong {
+    font-size: 30px;
+  }
+
+  .rating-stars {
+    font-size: 17px;
+  }
+
+  .rating-card small {
+    font-size: 12px;
   }
 
   .trusted-card {
-    top: auto;
-    bottom: 18%;
-    left: 4%;
-    padding: 7px 9px;
-    gap: 7px;
-    border-radius: 7px;
+    display: flex;
+    top: 58%;
+    bottom: auto;
+    left: 3%;
+    padding: 10px 13px;
+    gap: 10px;
+    border-radius: 9px;
   }
 
   .trusted-card .briefcase-icon {
-    width: 27px;
-    height: 27px;
-    flex-basis: 27px;
+    width: 34px;
+    height: 34px;
+    flex-basis: 34px;
   }
 
   .trusted-card small {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .trusted-card strong {
-    font-size: 20px;
+    font-size: 25px;
   }
 
   /* WHY SECTION */
@@ -985,20 +1013,21 @@ body.menu-open {
 
   .why-heading {
     display: block;
+    position: relative;
     text-align: center;
     margin-bottom: 28px;
-    padding-bottom: 85px;
+    padding-bottom: 145px;
   }
 
   .why h2 {
-    font-size: 31px;
+    font-size: 35px;
     line-height: 1.3;
-    letter-spacing: -.35px;
+    letter-spacing: -.4px;
   }
 
   .why-heading p {
-    margin-top: 17px;
-    font-size: 14px;
+    margin: 17px auto 0;
+    font-size: 17px;
     line-height: 1.75;
   }
 
@@ -1007,14 +1036,15 @@ body.menu-open {
   .heading-curved-arrow {
     display: block;
     position: absolute;
-    width: 22px;
-    height: auto;
-    max-width: 22px;
-    max-height: none;
+    width: 35px;
+    height: 129px;
+    max-width: 35px;
+    max-height: 129px;
     left: auto;
-    right: 5%;
+    right: 3%;
     top: auto;
     bottom: 0;
+    object-fit: contain;
   }
 
   /* DASHBOARD */
@@ -1097,7 +1127,6 @@ body.menu-open {
 ========================= */
 
 @media (prefers-reduced-motion: reduce) {
-
   *,
   *::before,
   *::after {
@@ -1105,5 +1134,4 @@ body.menu-open {
     transition-duration: .01ms !important;
     animation-duration: .01ms !important;
   }
-
 }
