@@ -1,131 +1,293 @@
+
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Compliance support for independent research analysts and firms.">
+
   <title>Compliance for Research Analysts</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+
+  <!-- HEADER / NAVBAR -->
   <header class="site-header" id="home">
     <nav class="nav container" aria-label="Main navigation">
+
       <a class="brand" href="#home" aria-label="Logo home">
         <img src="assets/brand-logo.png" alt="Logo">
       </a>
+
       <div class="desktop-links">
         <a class="active" href="#home">Home</a>
         <a href="#why">About Us</a>
         <a href="#services">Our Services</a>
-        <a href="#hover-states">Pricing</a>
-        <a href="#hover-states">FAQ</a>
+        <a href="#contact">Pricing</a>
+        <a href="#contact">FAQ</a>
         <a href="#contact">Contact</a>
       </div>
-      <a class="button button-primary header-cta" href="#contact"><span class="phone-icon" aria-hidden="true">♧</span>Contact Us</a>
-      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
-        <span></span><span></span><span></span>
+
+      <a class="button button-primary header-cta" href="#contact">
+        <span class="phone-icon" aria-hidden="true">♧</span>
+        Contact Us
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobile-drawer"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
+
     </nav>
   </header>
 
+
+  <!-- MOBILE / TABLET NAVIGATION -->
   <div class="drawer-backdrop" hidden></div>
-  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile navigation" aria-hidden="true">
+
+  <aside
+    class="mobile-drawer"
+    id="mobile-drawer"
+    aria-label="Mobile navigation"
+    aria-hidden="true"
+  >
+
     <div class="drawer-header">
-      <a class="brand" href="#home" aria-label="Logo home"><img src="assets/brand-logo.png" alt="Logo"></a>
-      <button class="drawer-close" type="button" aria-label="Close menu">×</button>
+
+      <a class="brand" href="#home" aria-label="Logo home">
+        <img src="assets/brand-logo.png" alt="Logo">
+      </a>
+
+      <button class="drawer-close" type="button" aria-label="Close menu">
+        ×
+      </button>
+
     </div>
+
     <nav class="drawer-links">
-      <a class="active" href="#home"><span class="nav-icon">⌂</span>Home</a>
-      <a href="#why"><span class="nav-icon">●</span>About Us</a>
-      <a href="#services"><span class="nav-icon">♧</span>Our Services</a>
-      <a href="#hover-states"><span class="nav-icon">◆</span>Pricing</a>
-      <a href="#hover-states"><span class="nav-icon">?</span>FAQ</a>
-      <a href="#contact"><span class="nav-icon">▣</span>Contact</a>
+
+      <a class="active" href="#home">
+        <span class="nav-icon">⌂</span> Home
+      </a>
+
+      <a href="#why">
+        <span class="nav-icon">●</span> About Us
+      </a>
+
+      <a href="#services">
+        <span class="nav-icon">♧</span> Our Services
+      </a>
+
+      <a href="#contact">
+        <span class="nav-icon">◆</span> Pricing
+      </a>
+
+      <a href="#contact">
+        <span class="nav-icon">?</span> FAQ
+      </a>
+
+      <a href="#contact">
+        <span class="nav-icon">▣</span> Contact
+      </a>
+
     </nav>
-    <a class="button button-primary drawer-cta" href="#contact">Contact Us</a>
+
+    <a class="button button-primary drawer-cta" href="#contact">
+      Contact Us
+    </a>
+
   </aside>
 
+
+  <!-- MAIN CONTENT -->
   <main>
+
+    <!-- HERO SECTION -->
     <section class="hero">
+
       <div class="container hero-grid">
+
         <div class="hero-copy">
-          <h1>Simplifying<br><span class="highlight">Compliance</span> For<br>Research Analysts</h1>
-          <p class="intro">Stay Focused On Your Insights—We’ll Handle The Compliance. Our Expert Solutions Ensure Your Research Practices Meet Every Regulatory Requirement With Confidence And Ease.</p>
+
+          <h1>
+            Simplifying<br>
+            <span class="highlight">Compliance</span> For<br>
+            Research Analysts
+          </h1>
+
+          <p class="intro">
+            Stay Focused On Your Insights—We’ll Handle The Compliance.
+            Our Expert Solutions Ensure Your Research Practices Meet
+            Every Regulatory Requirement With Confidence And Ease.
+          </p>
+
           <ul class="checks">
             <li>End-To-End Compliance Support</li>
             <li>Regulatory Filings Made Simple</li>
             <li>Tailored Solutions For Independent Analysts &amp; Firms</li>
           </ul>
+
           <div class="hero-actions">
-            <a class="button button-primary" href="#contact">Get Started</a>
-            <a class="button button-outline" href="#contact">Book A Consultation</a>
+
+            <a class="button button-primary" href="#contact">
+              Get Started
+            </a>
+
+            <a class="button button-outline" href="#contact">
+              Book A Consultation
+            </a>
+
           </div>
+
         </div>
+
+
+        <!-- HERO ILLUSTRATION -->
         <div class="hero-art">
-          <img src="assets/hero-illustration.png" alt="Research analyst holding a laptop with client rating and trusted professionals indicators">
+
+          <img
+            src="assets/hero-illustration.png"
+            alt="Research analyst holding a laptop with client rating and trusted professionals indicators"
+          >
+
         </div>
+
       </div>
+
     </section>
 
+
+    <!-- WHY COMPLIANCE SECTION -->
     <section class="why container" id="why">
+
       <div class="why-heading">
-        <h2>Why <span>Compliance</span> Matters<br>For Research Analysts</h2>
-        <p>In Today’s Regulatory Environment, Even A Small Oversight Can Lead To Penalties, Reputational Risks, And Loss Of Client Trust. We Help Research Analysts And Firms Navigate Complex Compliance Requirements So They Can Focus On Delivering High-Quality Research Without Worry.</p>
+
+        <h2>
+          Why <span>Compliance</span> Matters<br>
+          For Research Analysts
+        </h2>
+
+        <p>
+          In Today’s Regulatory Environment, Even A Small Oversight Can
+          Lead To Penalties, Reputational Risks, And Loss Of Client Trust.
+          We Help Research Analysts And Firms Navigate Complex Compliance
+          Requirements So They Can Focus On Delivering High-Quality
+          Research Without Worry.
+        </p>
+
       </div>
+
+
       <div class="why-content">
+
+        <!-- DASHBOARD ILLUSTRATION -->
         <div class="dashboard-art">
-          <img src="assets/dashboard-illustration.png" alt="Research dashboard illustration with charts, a plant and an analyst working on a laptop">
+
+          <img
+            src="assets/dashboard-illustration.png"
+            alt="Research dashboard illustration with charts, a plant and an analyst working on a laptop"
+          >
+
         </div>
+
+
+        <!-- FEATURE CARDS -->
         <div class="features" id="services">
+
           <article class="feature-card">
-            <img src="assets/f50716995ae3d2e2a0417a1852f26bb55f51bcae.png" alt="" aria-hidden="true">
-            <div><h3>Regulatory Clarity</h3><p>We Decode Complex Compliance Rules Into Simple, Actionable Steps.</p></div>
+
+            <img
+              src="assets/f50716995ae3d2e2a0417a1852f26bb55f51bcae.png"
+              alt=""
+              aria-hidden="true"
+            >
+
+            <div>
+              <h3>Regulatory Clarity</h3>
+
+              <p>
+                We Decode Complex Compliance Rules Into Simple,
+                Actionable Steps.
+              </p>
+            </div>
+
           </article>
+
+
           <article class="feature-card">
-            <img src="assets/6567bbf997ac14e8208dab1b699a4a2a7cdc759a.png" alt="" aria-hidden="true">
-            <div><h3>Hassle-Free Filings Clarity</h3><p>From Registration To Ongoing Reporting—We Manage It End-To-End.</p></div>
+
+            <img
+              src="assets/6567bbf997ac14e8208dab1b699a4a2a7cdc759a.png"
+              alt=""
+              aria-hidden="true"
+            >
+
+            <div>
+              <h3>Hassle-Free Filings Clarity</h3>
+
+              <p>
+                From Registration To Ongoing Reporting—We Manage
+                It End-To-End.
+              </p>
+            </div>
+
           </article>
+
+
           <article class="feature-card">
-            <img src="assets/0986ee00572bb9ff909a30b0186d9e8f6518c55b.png" alt="" aria-hidden="true">
-            <div><h3>Risk Protection</h3><p>Stay Ahead Of Audits, Inspections, And Compliance Gaps With Proactive Support.</p></div>
+
+            <img
+              src="assets/0986ee00572bb9ff909a30b0186d9e8f6518c55b.png"
+              alt=""
+              aria-hidden="true"
+            >
+
+            <div>
+              <h3>Risk Protection</h3>
+
+              <p>
+                Stay Ahead Of Audits, Inspections, And Compliance
+                Gaps With Proactive Support.
+              </p>
+            </div>
+
           </article>
+
         </div>
+
       </div>
+
     </section>
 
-    <section class="hover-showcase" id="hover-states">
-      <div class="container">
-        <h2 class="section-label">Hover Effect</h2>
-        <div class="hover-panel">
-          <div class="button-state-grid" aria-label="Button hover examples">
-            <a class="button button-primary" href="#contact">☎&nbsp; Contact Us</a>
-            <a class="button button-outline" href="#contact">♧&nbsp; Contact Us</a>
-            <a class="button button-primary" href="#contact">Get Started</a>
-            <a class="button button-outline" href="#contact">Get Started</a>
-            <a class="button button-outline" href="#contact">Book A Consultation</a>
-            <a class="button button-primary" href="#contact">Book A Consultation</a>
-          </div>
-          <div class="card-state-grid">
-            <article class="feature-card state-card">
-              <img src="assets/f50716995ae3d2e2a0417a1852f26bb55f51bcae.png" alt="" aria-hidden="true">
-              <div><h3>Regulatory Clarity</h3><p>We Decode Complex Compliance Rules Into Simple, Actionable Steps.</p></div>
-            </article>
-            <article class="feature-card state-card is-hovered">
-              <img src="assets/f50716995ae3d2e2a0417a1852f26bb55f51bcae.png" alt="" aria-hidden="true">
-              <div><h3>Regulatory Clarity</h3><p>We Decode Complex Compliance Rules Into Simple, Actionable Steps.</p></div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 
+
+  <!-- FOOTER -->
   <footer id="contact" class="contact-anchor">
-    <div class="container"><a href="mailto:hello@example.com">Contact Us</a></div>
+
+    <div class="container">
+      <a href="mailto:hello@example.com">Contact Us</a>
+    </div>
+
   </footer>
+
+
+  <!-- JAVASCRIPT -->
   <script src="script.js"></script>
+
 </body>
 </html>
