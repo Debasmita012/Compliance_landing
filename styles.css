@@ -57,13 +57,6 @@ a { color: inherit; }
 .feature-card h3 { margin: 0 0 7px; font-size: 18px; line-height: 1.25; font-weight: 600; }
 .feature-card p { margin: 0; color: var(--body); font-size: 14px; line-height: 1.55; }
 .feature-card:hover h3, .feature-card.is-hovered h3 { color: #2438c8; }
-.hover-showcase { padding: 18px 0 72px; background: #fff; }
-.section-label { margin: 0 0 14px; color: #c3c3c8; font-size: 18px; line-height: 1.4; font-weight: 400; }
-.hover-panel { padding: 30px; background: #fff; border: 1px solid #f0f0f6; }
-.button-state-grid { display: grid; grid-template-columns: 220px 220px; gap: 24px 70px; margin-bottom: 38px; }
-.button-state-grid .button { width: fit-content; min-width: 155px; min-height: 42px; }
-.card-state-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-.state-card { min-height: 105px; }
 .drawer-backdrop { position: fixed; inset: 0; z-index: 30; background: rgba(0,0,0,.72); opacity: 0; transition: opacity .22s ease; }
 .drawer-backdrop:not([hidden]) { display: block; opacity: 1; }
 .mobile-drawer { position: fixed; z-index: 31; top: 0; right: 0; bottom: 0; width: min(465px, 62vw); padding: 18px 20px 24px; background: #fafbff; transform: translateX(102%); transition: transform .24s ease; visibility: hidden; box-shadow: -5px 0 20px rgba(0,0,0,.08); }
@@ -123,13 +116,6 @@ body.menu-open { overflow: hidden; }
   .feature-card > img { width: 22px; height: 22px; flex-basis: 22px; }
   .feature-card h3 { font-size: 14px; margin-bottom: 5px; }
   .feature-card p { font-size: 11px; line-height: 1.5; }
-  .hover-showcase { padding: 14px 0 40px; }
-  .section-label { font-size: 15px; }
-  .hover-panel { padding: 16px 12px; }
-  .button-state-grid { grid-template-columns: 1fr 1fr; gap: 12px 10px; margin-bottom: 22px; }
-  .button-state-grid .button { width: 100%; min-width: 0; padding-inline: 6px; min-height: 36px; font-size: 10px; }
-  .card-state-grid { grid-template-columns: 1fr; gap: 10px; }
-  .state-card { min-height: 76px; }
   .mobile-drawer { width: 89vw; padding: 16px 16px 22px; }
   .drawer-header { margin-bottom: 22px; }
   .drawer-header .brand img { width: 112px; }
@@ -141,4 +127,132 @@ body.menu-open { overflow: hidden; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
+
+
+/* Original Figma artwork and hero statistic cards */
+.hero-art {
+  position: relative;
+  width: 100%;
+  max-width: 650px;
+  min-width: 0;
+  margin-inline: auto;
+}
+.hero-art > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.hero-stat {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  color: #111116;
+  background: #fff;
+  border-radius: 9px;
+  box-shadow: 0 5px 18px rgba(35, 43, 110, .06);
+  white-space: nowrap;
+}
+.rating-card {
+  top: 39%;
+  right: 5%;
+}
+.rating-card > strong {
+  color: var(--blue);
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 700;
+}
+.rating-card > span,
+.trusted-card > span {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.rating-stars {
+  color: #f5a000;
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+.hero-stat small {
+  font-size: 11px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+.trusted-card {
+  top: 58%;
+  left: 4%;
+  gap: 12px;
+}
+.trusted-card strong {
+  color: var(--blue);
+  font-size: 25px;
+  line-height: 1;
+  font-weight: 700;
+}
+.briefcase-icon {
+  display: block;
+  width: 43px;
+  height: 43px;
+  flex: 0 0 43px;
+  color: var(--blue);
+}
+
+/* Keep the content section white on every viewport, including mobile. */
+body,
+.why {
+  background-color: #fff;
+}
+
+@media (max-width: 1100px) {
+  .hero-art {
+    width: min(100%, 520px);
+  }
+  .rating-card {
+    top: 40%;
+    right: 3%;
+  }
+  .trusted-card {
+    top: 59%;
+    left: 2%;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-art {
+    width: min(100%, 360px);
+  }
+  .hero-art > img {
+    width: 100%;
+  }
+  .rating-card {
+    display: none;
+  }
+  .trusted-card {
+    top: auto;
+    bottom: 19%;
+    left: 4%;
+    padding: 7px 9px;
+    gap: 7px;
+    border-radius: 7px;
+  }
+  .trusted-card .briefcase-icon {
+    width: 27px;
+    height: 27px;
+    flex-basis: 27px;
+  }
+  .trusted-card small {
+    font-size: 9px;
+  }
+  .trusted-card strong {
+    font-size: 19px;
+  }
+  .why {
+    background: #fff;
+  }
 }
