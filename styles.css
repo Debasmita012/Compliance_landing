@@ -81,7 +81,6 @@ img { max-width: 100%; }
   margin-inline: auto; display: flex; align-items: center; justify-content: center;
 }
 .hero-art > img { display: block; width: 100%; height: auto; object-fit: contain; }
-.hero-chevron { position: absolute; left: 53%; top: 72px; z-index: 2; }
 img.figma-chevron, img.figma-chevron.hero-chevron, img.figma-chevron.dashboard-chevron {
   display: block; width: 162px; height: 35px; max-width: 162px; max-height: 35px;
   object-fit: contain; object-position: left center; filter: none; transform: none;
@@ -175,7 +174,6 @@ body.menu-open { overflow: hidden; }
   .checks li { font-size: 17px; }
   .hero-actions { justify-content: center; gap: 18px; }
   .hero-actions .button { min-width: 210px; }
-  .hero-chevron { position: static; justify-self: start; margin: 0 0 0 8%; }
   .hero-art { width: min(100%, 620px); }
   .rating-card { top: 39%; right: 4%; }
   .trusted-card { top: 58%; left: 3%; }
@@ -216,7 +214,6 @@ body.menu-open { overflow: hidden; }
   img.figma-chevron, img.figma-chevron.hero-chevron, img.figma-chevron.dashboard-chevron {
     width: 90px; height: auto; max-width: 90px; max-height: none;
   }
-  .hero-chevron { position: static; justify-self: start; margin: 0 0 0 8px; }
   .hero-art { width: min(100%, 360px); margin-top: 0; }
   .hero-art > img { width: 100%; }
   .rating-card { display: none; }
