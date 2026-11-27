@@ -256,3 +256,157 @@ body,
     background: #fff;
   }
 }
+
+
+/* === Figma feedback refinements === */
+.site-header { background: #f9faff; }
+.brand img { width: 170px; }
+.nav { gap: 26px; }
+.desktop-links { gap: clamp(22px, 2.7vw, 44px); }
+.desktop-links a { font-size: 15px; }
+.header-cta { min-height: 48px; padding-inline: 22px; font-size: 15px; }
+.phone-icon { width: 19px; height: 19px; flex: 0 0 19px; }
+.hero { background: #f8f9ff; }
+.hero-grid { min-height: 650px; gap: 28px; }
+.hero-copy { padding-left: 18px; }
+.hero h1 { font-size: clamp(54px, 4.45vw, 66px); line-height: 1.18; letter-spacing: -1.7px; margin-bottom: 26px; }
+.highlight::after { height: 4px; bottom: -5px; transform: rotate(-1deg); }
+.intro { max-width: 610px; font-size: 18px; line-height: 1.75; margin-bottom: 26px; }
+.checks { gap: 14px; margin-bottom: 30px; }
+.checks li { gap: 14px; font-size: 17px; }
+.checks li::before { width: 27px; height: 27px; flex-basis: 27px; font-size: 16px; }
+.hero-actions { gap: 22px; }
+.hero-actions .button { min-width: 210px; min-height: 56px; font-size: 17px; border-radius: 7px; }
+.hero-art { max-width: 690px; }
+.hero-art > img { width: 100%; }
+.hero-stat { padding: 13px 17px; border-radius: 11px; gap: 14px; }
+.rating-card { top: 40%; right: 4%; }
+.trusted-card { top: 58%; left: 2%; }
+.rating-card > strong { font-size: 38px; }
+.rating-stars { font-size: 19px; }
+.hero-stat small { font-size: 13px; }
+.trusted-card strong { font-size: 30px; }
+.briefcase-icon { width: 50px; height: 50px; flex-basis: 50px; }
+.chevron-decoration { position: absolute; display: flex; gap: 4px; pointer-events: none; }
+.chevron-decoration::before {
+  content: "";
+  width: 145px;
+  height: 30px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 30'%3E%3Cg fill='none' stroke='%23e2e3ff' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 3l12 12L3 27M27 3l12 12-12 12M51 3l12 12-12 12M75 3l12 12-12 12M99 3l12 12-12 12M123 3l12 12-12 12'/%3E%3C/g%3E%3C/svg%3E") left center / contain no-repeat;
+}
+.hero-chevrons { top: 4%; left: 7%; }
+.why { padding-top: 76px; padding-bottom: 82px; }
+.why-heading { position: relative; grid-template-columns: 1fr 1fr; gap: 74px; margin-bottom: 66px; align-items: start; }
+.why h2 { font-size: clamp(42px, 3.45vw, 52px); line-height: 1.42; letter-spacing: -1px; }
+.why-heading p { margin: 4px 0 0; font-size: 18px; line-height: 1.8; }
+.curly-arrow { position: absolute; width: 66px; height: 142px; color: #b6bcff; right: calc(50% - 34px); top: 105px; }
+.why-content { grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); align-items: center; gap: 70px; }
+.dashboard-art { position: relative; flex-direction: column; }
+.dashboard-art img { width: min(100%, 500px); }
+.dashboard-chevrons { position: relative; align-self: flex-start; margin-top: 12px; margin-left: -8px; }
+.dashboard-chevrons::before { width: 145px; height: 30px; }
+.features { gap: 28px; }
+.feature-card { min-height: 145px; align-items: flex-start; gap: 24px; padding: 27px 30px; border-radius: 9px; }
+.feature-card > img { width: 38px; height: 38px; flex: 0 0 38px; filter: invert(31%) sepia(55%) saturate(2435%) hue-rotate(220deg) brightness(95%) contrast(91%); }
+.feature-card h3 { margin: 0 0 12px; font-size: 25px; line-height: 1.3; font-weight: 700; }
+.feature-card p { font-size: 18px; line-height: 1.7; }
+.contact-anchor { background: #f8f9ff; }
+
+/* Tablet: retain the Figma tablet navigation and two-column content composition. */
+@media (max-width: 1100px) {
+  .container { width: calc(100% - 48px); }
+  .site-header { height: 82px; }
+  .nav { gap: 16px; }
+  .brand img { width: 145px; }
+  .desktop-links { display: none; }
+  .header-cta { display: inline-flex; margin-left: auto; min-height: 46px; padding-inline: 17px; font-size: 14px; }
+  .menu-toggle { display: block; margin-left: 0; }
+  .hero-grid { min-height: auto; grid-template-columns: 1fr; gap: 18px; padding-block: 42px 30px; }
+  .hero-copy { padding: 0; text-align: center; }
+  .hero h1 { max-width: 760px; margin: 0 auto 22px; font-size: 54px; line-height: 1.2; letter-spacing: -1px; }
+  .intro { max-width: 720px; margin: 0 auto 24px; font-size: 17px; }
+  .checks { margin: 0 auto 25px; gap: 12px; text-align: left; }
+  .checks li { font-size: 16px; }
+  .hero-actions { justify-content: center; gap: 18px; }
+  .hero-actions .button { min-width: 210px; min-height: 52px; font-size: 16px; }
+  .hero-art { width: min(100%, 560px); }
+  .hero-chevrons { top: 0; left: 2%; }
+  .rating-card { top: 40%; right: 3%; }
+  .trusted-card { top: 58%; left: 2%; }
+  .why { padding-top: 54px; padding-bottom: 58px; }
+  .why-heading { grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 42px; }
+  .why h2 { font-size: 39px; line-height: 1.35; }
+  .why-heading p { font-size: 15px; line-height: 1.75; }
+  .curly-arrow { width: 46px; height: 105px; right: calc(50% - 24px); top: 95px; }
+  .why-content { grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: 28px; }
+  .dashboard-art img { width: 100%; }
+  .features { gap: 16px; }
+  .feature-card { min-height: 116px; padding: 19px 16px; gap: 14px; }
+  .feature-card > img { width: 30px; height: 30px; flex-basis: 30px; }
+  .feature-card h3 { font-size: 19px; margin-bottom: 8px; }
+  .feature-card p { font-size: 14px; line-height: 1.55; }
+  .mobile-drawer { width: min(465px, 62vw); }
+}
+
+/* Mobile: stack the sections and preserve all primary actions. */
+@media (max-width: 600px) {
+  .container { width: calc(100% - 28px); }
+  .site-header { height: 66px; }
+  .nav { gap: 8px; }
+  .brand img { width: 105px; }
+  .header-cta { display: inline-flex; min-height: 38px; padding: 0 10px; gap: 5px; font-size: 11px; border-radius: 5px; }
+  .phone-icon { width: 14px; height: 14px; flex-basis: 14px; }
+  .menu-toggle { width: 30px; height: 32px; padding: 5px 2px; }
+  .menu-toggle span { width: 21px; }
+  .hero-grid { padding-block: 30px 18px; gap: 8px; }
+  .hero h1 { max-width: 360px; font-size: 36px; line-height: 1.22; letter-spacing: -.7px; margin-bottom: 20px; }
+  .highlight::after { height: 2px; bottom: -3px; }
+  .intro { max-width: 360px; font-size: 14px; line-height: 1.65; margin-bottom: 22px; }
+  .checks { width: min(100%, 330px); gap: 10px; margin-bottom: 24px; }
+  .checks li { font-size: 14px; line-height: 1.45; gap: 11px; }
+  .checks li::before { width: 21px; height: 21px; flex-basis: 21px; font-size: 13px; }
+  .hero-actions { display: grid; grid-template-columns: 1fr; gap: 12px; width: 100%; }
+  .hero-actions .button { width: 100%; min-height: 46px; font-size: 14px; }
+  .hero-art { width: min(100%, 370px); }
+  .hero-chevrons { top: 0; left: 2%; }
+  .hero-chevrons::before { width: 78px; height: 20px; }
+  .hero-art > img { width: 100%; }
+  .rating-card { display: none; }
+  .trusted-card { top: auto; bottom: 18%; left: 4%; padding: 7px 9px; gap: 7px; border-radius: 7px; }
+  .trusted-card .briefcase-icon { width: 27px; height: 27px; flex-basis: 27px; }
+  .trusted-card small { font-size: 9px; }
+  .trusted-card strong { font-size: 19px; }
+  .why { padding-top: 42px; padding-bottom: 46px; }
+  .why-heading { display: block; text-align: center; margin-bottom: 28px; }
+  .why h2 { font-size: 34px; line-height: 1.22; letter-spacing: -.5px; }
+  .why-heading p { margin-top: 18px; font-size: 14px; line-height: 1.65; }
+  .curly-arrow { display: none; }
+  .why-content { grid-template-columns: 1fr; gap: 24px; }
+  .dashboard-art img { width: min(100%, 340px); }
+  .dashboard-chevrons { margin-top: 5px; margin-left: 0; }
+  .dashboard-chevrons::before { width: 105px; height: 22px; }
+  .features { gap: 16px; }
+  .feature-card { min-height: 112px; padding: 18px 16px; gap: 14px; }
+  .feature-card > img { width: 28px; height: 28px; flex-basis: 28px; }
+  .feature-card h3 { font-size: 19px; margin-bottom: 8px; }
+  .feature-card p { font-size: 14px; line-height: 1.6; }
+  .mobile-drawer { width: 89vw; padding: 16px 16px 22px; }
+  .drawer-header { margin-bottom: 22px; }
+  .drawer-header .brand img { width: 112px; }
+  .drawer-links a { min-height: 58px; gap: 17px; font-size: 14px; }
+  .drawer-cta { margin-top: 16px; min-height: 44px; }
+}
+
+@media (min-width: 601px) and (max-width: 800px) {
+  .site-header { height: 76px; }
+  .brand img { width: 132px; }
+  .header-cta { min-height: 42px; font-size: 13px; }
+  .hero h1 { font-size: 48px; }
+  .why h2 { font-size: 34px; }
+  .why-heading { gap: 22px; }
+  .why-content { gap: 20px; }
+  .feature-card { padding: 15px 12px; gap: 10px; }
+  .feature-card h3 { font-size: 17px; }
+  .feature-card p { font-size: 13px; }
+}
+
